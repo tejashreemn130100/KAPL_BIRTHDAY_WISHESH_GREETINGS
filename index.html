@@ -1,29 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card</title>
+    <style>
+        /* Add your styles here */
+        .birthdaycard {
+            border: 2px solid #ddd;
+            width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .cardfront, .cardinside {
+            padding: 20px;
+        }
+        .happy {
+            color: #ff4081;
+            font-size: 24px;
+        }
+        .balloons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .balloon1, .balloon2, .balloon3, .balloon4 {
+            width: 20px;
+            height: 30px;
+            background-color: #ff4081;
+            border-radius: 50%;
+            position: relative;
+        }
+        .balloon1::after, .balloon2::after, .balloon3::after, .balloon4::after {
+            content: '';
+            width: 2px;
+            height: 20px;
+            background-color: #000;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .back {
+            color: #2196f3;
+            font-size: 22px;
+        }
+        .name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        footer h4 a {
+            text-decoration: none;
+            color: #2196f3;
+        }
+        footer h4 a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
 <div class="birthdaycard">
 
-<div class="cardfront">
-<h3 class="happy">Happy Birthday!</h3>
+    <div class="cardfront">
+        <h3 class="happy">Happy Birthday!</h3>
 
-<div class="balloons">
+        <div class="balloons">
+            <div class="balloon1"></div>
+            <div class="balloon2"></div>
+            <div class="balloon3"></div>
+            <div class="balloon4"></div>
+        </div><!-- end balloons -->
 
-<div class="balloon1"></div>
+    </div><!-- end cardfront -->
 
-<div class="balloon2"></div>
-
-<div class="balloon3"></div>
-
-<div class="balloon4"></div>
-
-</div><!-- end balloons -->
-
-</div><!-- end cardfront -->
-
-<div class="cardinside">
-<h3 class="back">HAPPY BIRTHDAY!</h3>
-<p>Dear Friend,</p>
-<p>Happy Birthday! I hope your day is filled with lots of love and laughter! May all of your birthday wishes come true!</p>
-  
-<p class="name">KAPL</p>
-</div><!-- end cardinside -->
+    <div class="cardinside">
+        <h3 class="back">HAPPY BIRTHDAY!</h3>
+        <p>Dear Friend,</p>
+        <p>Happy Birthday! I hope your day is filled with lots of love and laughter! May all of your birthday wishes come true!</p>
+        <p class="name">KAPL</p>
+    </div><!-- end cardinside -->
 
 </div><!-- end birthdaycard -->
 
+<footer>
+    <h4><a href="https://www.youtube.com/watch?v=RQdoY-rppz8" target="_blank" rel="noopener noreferrer">Tutorial by Lena Design</a></h4>
+</footer>
+
+</body>
+</html>
